@@ -4,7 +4,7 @@ Docker image that will bootstrap an environment for running a Grails application
 
 ## Technologies / Versions Used
 - Grails 3.1.1 (by default; all versions from `2.0.0` up to `3.1.1` can be specified) 
-- Java JDK 7+ (for Grails 2) or 8+ (for Grails 3)
+- Java JDK 8+
 - Tomcat 7+ (for Grails 2) or 8+ (for Grails 3)
 
 ## Running Using Defaults ##
