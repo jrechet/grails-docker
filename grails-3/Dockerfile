@@ -1,4 +1,4 @@
-FROM java:8
+FROM openjdk:8
 MAINTAINER Manuel Ortiz Bey <ortiz.manuel@mozartanalytics.com>
 
 # Set customizable env vars defaults.
