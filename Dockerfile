@@ -17,7 +17,3 @@ RUN apk update && \
 # Setup Grails path.
 ENV GRAILS_HOME /usr/lib/jvm/grails
 ENV PATH $GRAILS_HOME/bin:$PATH
-
-WORKDIR /
-# Set Default Behavior
-ENTRYPOINT ["grails"]
