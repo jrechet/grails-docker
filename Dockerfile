@@ -1,17 +1,14 @@
-FROM openjdk:8-jdk-alpine
+FROM gradle:6.0-jdk11
 MAINTAINER Michaël van de Giessen <tubbynl@github.com>
 
-# Set Grails version (max version for this Docker image is: 2.5.6).
-ENV GRAILS_VERSION 2.5.6
+# Set Grails version (default: 4.0.1; min: 3.0.0; max: 4.0.1).
+ENV GRAILS_VERSION 4.0.1
 
 WORKDIR /usr/lib/jvm
 # Install Grails
-RUN apk update && \
-    apk add ca-certificates wget curl && \
-    update-ca-certificates && \
-    wget -q https://github.com/grails/grails-core/releases/download/v$GRAILS_VERSION/grails-$GRAILS_VERSION.zip && \
+RUN wget -q https://github.com/grails/grails-core/releases/download/v$GRAILS_VERSION/grails-$GRAILS_VERSION.zip && \
     unzip -q grails-$GRAILS_VERSION.zip && \
-    rm -rf grails-$GRAILS_VERSION.zip /var/cache/apk/* && \
+    rm -rf grails-$GRAILS_VERSION.zip && \
     ln -s grails-$GRAILS_VERSION grails
 
 # Setup Grails path.
