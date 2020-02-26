@@ -2,7 +2,7 @@ FROM gradle:6.0-jdk11
 MAINTAINER Michaël van de Giessen <tubbynl@github.com>
 
 # Set Grails version (default: 4.0.1; min: 3.0.0; max: 4.0.1).
-ENV GRAILS_VERSION 4.0.1
+ENV GRAILS_VERSION 4.0.2
 
 WORKDIR /usr/lib/jvm
 # Install Grails
