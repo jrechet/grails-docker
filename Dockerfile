@@ -2,7 +2,7 @@ FROM gradle:3.5-jdk8
 MAINTAINER Michaël van de Giessen <tubbynl@github.com>
 
 # Set Grails version (default: 4.0.1; min: 3.0.0; max: 4.0.1).
-ENV GRAILS_VERSION 3.2.13
+ENV GRAILS_VERSION 3.3.11
 
 WORKDIR /usr/lib/jvm
 USER root
