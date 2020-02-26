@@ -5,6 +5,7 @@ MAINTAINER Michaël van de Giessen <tubbynl@github.com>
 ENV GRAILS_VERSION 3.2.13
 
 WORKDIR /usr/lib/jvm
+USER root
 # Install Grails
 RUN wget -q https://github.com/grails/grails-core/releases/download/v$GRAILS_VERSION/grails-$GRAILS_VERSION.zip && \
     unzip -q grails-$GRAILS_VERSION.zip && \
@@ -14,3 +15,4 @@ RUN wget -q https://github.com/grails/grails-core/releases/download/v$GRAILS_VER
 # Setup Grails path.
 ENV GRAILS_HOME /usr/lib/jvm/grails
 ENV PATH $GRAILS_HOME/bin:$PATH
+USER gradle
